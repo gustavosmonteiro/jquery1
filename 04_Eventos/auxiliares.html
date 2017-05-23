@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos auxiliares</title>
+    <style>
+        #mensagem{
+            background: #f4f4f4;
+            border: 1px dotted darkgray;
+            width: 100px;
+            height: 30px;
+            margin-top: 20px;
+            padding: 10px;
+            
+        }
+        
+        #boneco{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            
+        }
+    
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("input[type=text]").focus(function(){
+                $("#mensagem").text("Entrou no campo.");
+                
+            });
+            
+            $("input[type=text]").blur(function(){
+                $("#mensagem").text("Saiu do campo.");
+                
+            });
+            
+            $("#selEstados").change(function(){
+                $("#mensagem").text("Mudou estado.");
+                
+            });
+            
+            $("input[type=button]").click(function(){
+                $("#mensagem").text("Clicou no botao.");
+                
+            });
+            
+            $("input[type=button]").dblclick(function(){
+                $("#mensagem").text("Clique duplo no botao.");
+                
+            });
+            
+            $("#mensagem").mouseover(function(){
+                $("#mensagem").css("background", "#00ffff");
+                
+            });
+            
+            $("#mensagem").mouseout(function(){
+                $("#mensagem").css("background", "#f4f4f4");
+                
+            });
+            
+            $("#boneco").mousemove(function(e){
+                console.log("X: " + e.clientX);
+                console.log("Y: " + e.clientY);
+                
+                var x = e.clientX - 125;
+                var y = e.clientY - 125;
+                
+                $("#boneco").css("left", x);
+                $("#boneco").css("top", y);
+                
+                
+            });
+        });
+    
+    </script>
+</head>
+
+<body>
+   
+   <h1>Eventos auxiliares</h1>
+   
+   
+   <form>
+       <label for="txtNome">Nome</label>
+       <input type="text" id="txtNome"> 
+       
+       <label for="selEstados">Estado</label>
+       <select id="selEstados">
+           <option value="SP">São Paulo</option>
+           <option value="RJ">Rio de Janeiro</option>
+           
+       </select>
+       
+       <input type="button" value="Enviar">
+       
+       <div id="mensagem"></div>
+       
+       <div id="boneco">
+           <img src="idabliosilva.jpg" alt="idalio">
+           
+       </div>
+       
+   </form>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contexto</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(e){
+           
+            //Maneira 1
+            $("h1", "article").css("color", "red");
+            
+            //Maneira 2
+            $("article h1").css("color","blue");
+            
+        });
+    
+    </script>
+</head>
+
+<body>
+   
+   <h1>Contexto</h1>
+   
+   <article>
+       <h1>Titulo</h1>
+       <p>Conteudo</p>
+       
+   </article>
+    
+</body>
+</html>

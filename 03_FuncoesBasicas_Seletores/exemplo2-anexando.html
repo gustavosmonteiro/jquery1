@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Anexando HTML</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("article").css("background", "#f4f4f4");
+            
+            $("<p>Criando um paragrafo antes</p>").prependTo("article");
+            $("<p>Criando um paragrafo depois</p>").appendTo("article");
+            
+            $("article").append("<p>Outra forma</p>");
+            
+        });
+    
+    </script>
+</head>
+
+<body>
+   
+   <h1>Anexando HTML</h1>
+   
+   <article>
+       <h1>Titulo</h1>
+       <p>Conteudo</p>
+       
+   </article>
+    
+</body>
+</html>

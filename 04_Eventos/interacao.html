@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos de interação</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("input[type=button]").hover(
+                function(){
+                    $("img").css("visibility", "hidden");
+                }
+            ,
+                function(){
+                    $("img").css("visibility", "visible");
+                }
+            
+            );
+            
+            $("div").focusin(function(){
+                $("p").text("Entrou");
+                
+            });
+            
+            $("div").focusout(function(){
+                $("p").text("Saiu");
+                
+            });
+            
+            
+        });
+    
+    </script>
+</head>
+
+<body>
+   
+   <h1>Eventos de interação</h1>
+   
+   <input type="button" value="Visibilidade">
+   <img src="idabliosilva.jpg" alt="adablio silva">
+   
+   <div id="conteudo">
+       <label for="txtNome">Nome</label>
+       <input type="text" id="txtNome"> 
+       
+       <label for="txtEmail">Email</label>
+       <input type="text" id="txtEmail">
+       
+       <p></p>
+       
+       
+       
+       
+       
+   </div>
+    
+</body>
+</html>

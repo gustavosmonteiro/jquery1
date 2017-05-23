@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teclado</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $(document).keydown(function(e){
+//                $("p").html(e.keyCode);
+                
+                if (e.keyCode == 39) $("p").html("Direita");
+                if (e.keyCode == 37) $("p").html("Esquerda");
+                if (e.keyCode == 38) $("p").html("Cima");
+                if (e.keyCode == 40) $("p").html("Baixo");
+                
+            });
+            
+            $("input").keydown(function(){
+//                $("p").html("DOWN");
+            });
+            
+            $("input").keyup(function(){
+//                $("p").html("UP");
+            });
+            
+        });
+    
+    
+    </script>
+</head>
+
+<body>
+   
+   <h1>Teclado</h1>
+   
+   <label for="txtNome">Nome</label>
+   <input type="text" id="txtNome">
+   <p></p>
+    
+</body>
+</html>
